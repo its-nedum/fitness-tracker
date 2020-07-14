@@ -1,1 +1,68 @@
-<h1>Edite page </h1>
+
+<div class="banner">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+        <h3>Edit an Activity</h3>
+        <hr>
+        <%= form_for :activity, url: activity_path(@activity), method: :patch do |form| %>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <%= form.label :name %><br>
+                    <%= form.select( :name, ['Running','Walking','Cycling','Swimming','Hiking',
+                                            'Rowing','Elliptical','Skating','Mountain Biking','Core Strength'], 
+                        {include_blank: "Select activity name"}, 
+                        {:class => 'form-control'}) %>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <%= form.label :title %><br>
+                    <%= form.text_field :title, placeholder: "Morning Run", :class => 'form-control' %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 mt-2">
+                    <%= form.label :description %><br>
+                    <%= form.text_area :description, placeholder: "How did it go? Were you tired? How was the weather?", :class => 'form-control' %>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <%= form.label :distance %><br>
+                    <%= form.number_field :distance,  :class => 'form-control' %>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <%= form.label :elevation %><br>
+                    <%= form.number_field(:elevation, {:class => 'form-control'}) %>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <%= form.label :perceived_exertion %><br>
+                    <%= form.select(:exertion, ['Easy', 'Moderate', 'Difficult'], {include_blank: "How did it feel?"}, {:class => 'form-control'}) %>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <%= form.label :duration_in_minutes %><br>
+                    <%= form.number_field(:duration, {:class => 'form-control'}) %>
+                </div>
+                
+                <div class="col-sm-12 col-md-4">
+                    <%= form.label :date %><br>
+                    <%= form.date_field(:date, {:class => 'form-control'}) %>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <%= form.label :start_time %><br>
+                    <%= form.time_field(:time, {:class => 'form-control'}) %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-3">
+                <%= form.submit({:class => 'btn btn-success'})%>
+                </div>
+            </div>
+        <% end %>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
