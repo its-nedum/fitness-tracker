@@ -4,14 +4,12 @@
     background-size: cover;
     overflow: hidden;
     position: relative;
-    /* margin-top: 40px; */
-    /* background-image: url('bg.jpg'); */
-}
-.bg{
-    background-image: url('bg.jpg');
-    background-repeat: no-repeat;
+    margin-top: 40px;
 }
 
+nav {
+    background-color: rgba(0,15,117,.8) !important;
+}
 .nav-link{
     color: #fff !important;
 }
