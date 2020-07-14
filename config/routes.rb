@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   # home page routes
   root "pages#home"
 
+  get '/users' => 'activitys#index', as: :user_root # creates user_root_path
+
+
   # devise routes
   devise_for :users
 end
