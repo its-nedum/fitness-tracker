@@ -4,8 +4,12 @@
     background-size: cover;
     overflow: hidden;
     position: relative;
-    margin-top: 40px;
-    /* background-image: url('gym_pattern.jpg'); */
+    /* margin-top: 40px; */
+    /* background-image: url('bg.jpg'); */
+}
+.bg{
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
 }
 
 .nav-link{
