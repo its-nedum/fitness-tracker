@@ -1,8 +1,10 @@
-<h1>Add a new Activity </h1>
+
 <div class="banner">
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
+        <h3>Add a new Activity </h3>
+        <hr>
         <%= form_for :activity, url: activitys_path do |form| %>
             <div class="row">
                 <div class="col-sm-12 col-md-6">
@@ -14,43 +16,49 @@
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <%= form.label :title %><br>
-                    <%= form.text_field(:title, {:class => 'form-control'}) %>
+                    <%= form.text_field :title, placeholder: "Morning Run", :class => 'form-control' %>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 mt-2">
                     <%= form.label :description %><br>
-                    <%= form.text_area(:description, {:class => 'form-control'}) %>
+                    <%= form.text_area :description, placeholder: "How did it go? Were you tired? How was the weather?", :class => 'form-control' %>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :distance %><br>
-                    <%= form.text_field(:distance, {:class => 'form-control'}) %>
-                </div>
-                <div class="col-sm-12 col-md-4">
-                    <%= form.label :duration %><br>
-                    <%= form.text_field(:duration, {:class => 'form-control'}) %>
+                    <%= form.number_field :distance,  :class => 'form-control' %>
                 </div>
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :elevation %><br>
-                    <%= form.text_field(:elevation, {:class => 'form-control'}) %>
+                    <%= form.number_field(:elevation, {:class => 'form-control'}) %>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <%= form.label :perceived_exertion %><br>
+                    <%= form.select(:exertion, ['Easy', 'Moderate', 'Difficult'], {include_blank: "How did it feel?"}, {:class => 'form-control'}) %>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-sm-12 col-md-4">
-                    <%= form.label :exertion %><br>
-                    <%= form.text_field(:exertion, {:class => 'form-control'}) %>
+                    <%= form.label :duration %><br>
+                    <%= form.time_field(:duration, {:class => 'form-control'}) %>
                 </div>
+                
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :date %><br>
-                    <%= form.text_field(:date, {:class => 'form-control'}) %>
+                    <%= form.date_field(:date, {:class => 'form-control'}) %>
                 </div>
                 <div class="col-sm-12 col-md-4">
-                    <%= form.label :time %><br>
-                    <%= form.text_field(:time, {:class => 'form-control'}) %>
+                    <%= form.label :start_time %><br>
+                    <%= form.time_field(:time, {:class => 'form-control'}) %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-3">
+                <%= form.submit({:class => 'btn btn-success'})%>
                 </div>
             </div>
         <% end %>
