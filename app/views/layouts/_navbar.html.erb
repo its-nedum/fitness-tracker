@@ -14,7 +14,7 @@
             <%= link_to 'Dashboard', user_root_path, :class => 'nav-link' %>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Create Activity</a>
+            <%= link_to 'Create Activity', new_activity_path, :class => 'nav-link' %>
         </li>
         <li class="nav-item">
             <%= link_to 'Sign Out', destroy_user_session_path, :class => 'nav-link', method: :delete %>

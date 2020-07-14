@@ -5,7 +5,7 @@ class ActivitysController < ApplicationController
     end
 
     def new
-
+        
     end
 
     def create
