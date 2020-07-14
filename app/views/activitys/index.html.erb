@@ -3,6 +3,9 @@
         <div class="col-md-2"></div>
         <div class="col-sm-12 col-md-8">
         <h3>Activity Feed</h3>
+        <% if @activitys.count == 0 %>
+            <p class="text-danger">No activity found!</p>
+        <% end %>
         <% @activitys.each do |activity| %>
             <div class="card mb-3">
                 <div class="card-header">
