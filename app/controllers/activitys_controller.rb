@@ -1,4 +1,5 @@
 class ActivitysController < ApplicationController
+    before_action :authenticate_user!
 
     def index
         @activitys = Activity.all.order("created_at DESC")
