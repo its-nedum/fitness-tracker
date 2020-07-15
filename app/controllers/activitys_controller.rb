@@ -2,7 +2,8 @@ class ActivitysController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        @activitys = Activity.all.order("created_at DESC")
+        # Display activities for only the logged in user
+        @activitys = Activity.where(user: current_user.email).order("created_at DESC")
     end
 
     def new
