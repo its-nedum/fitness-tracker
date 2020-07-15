@@ -1,7 +1,28 @@
 <div class="banner">
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-sm-12 col-md-8">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="text-center">
+                    <%= image_tag('favicon.jpg', :alt => "pic", :class => 'img-avatar') %>
+                </div>
+                <hr>
+                <div class="card-body text-center">
+                    <h4>Chinedu Emesue</h4>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title"> 10 </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Activities</h6>
+                    </div>
+                    <div class="col">
+                        <h5 class="card-title"> 10 </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Activities</h6>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-9">
         <h3>Activity Feed</h3>
         <% if @activitys.count == 0 %>
             <p class="text-danger">No activity found!</p>
@@ -33,6 +54,6 @@
             </div>    
         <% end %>
         </div>
-        <div class="col-md-2"></div>
+        
     </div>
 </div>
