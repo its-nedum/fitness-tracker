@@ -11,7 +11,7 @@ class ActivitysController < ApplicationController
 
     def create
         @activity = Activity.new(activity_params)
-        @activity.user = current_user
+        @activity.user = current_user.email
         if (@activity.save)
             redirect_to @activity
         else
