@@ -34,7 +34,7 @@ class ActivitysController < ApplicationController
         @activity = Activity.find(params[:id])
 
         # update the activity
-        if(@activity.update(post_params))
+        if(@activity.update(activity_params))
             redirect_to @activity
         else
             render 'edit'

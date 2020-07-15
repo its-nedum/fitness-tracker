@@ -6,6 +6,7 @@
         <h3>Edit an Activity</h3>
         <hr>
         <%= form_for :activity, url: activity_path(@activity), method: :patch do |form| %>
+        <%= render 'layouts/alerts'%>
             <div class="row">
                 <div class="col-sm-12 col-md-6">
                     <%= form.label :name %><br>
@@ -46,14 +47,13 @@
                     <%= form.label :duration_in_minutes %><br>
                     <%= form.number_field(:duration, {:class => 'form-control'}) %>
                 </div>
-                
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :date %><br>
-                    <%= form.date_field(:date, {:class => 'form-control'}) %>
+                    <%= form.text_field(:date, {:class => 'form-control'}) %>
                 </div>
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :start_time %><br>
-                    <%= form.time_field(:time, {:class => 'form-control'}) %>
+                    <%= form.text_field(:time, {:class => 'form-control'}) %>
                 </div>
             </div>
             <div class="row">
