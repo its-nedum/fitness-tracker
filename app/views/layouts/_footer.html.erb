@@ -1,22 +1,41 @@
 <footer>
     <div class="footer-banner">
-        <div class="row">
+        <div class="row justify-content-between">
             <div class="col-sm-12 col-md-4">
                 <div class="footer-section">
                     <h5>ABOUT</h5>
                     <div class="">
-                    Move and Groove is a fitness tracker web app that allows users to sign up and log activities of different kinds.
+                    Move and Groove is a fitness tracker web app <br>
+                    that allows users to sign up and log their<br>
+                    fitness activities of different kinds.
                     </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4">
                 <div class="footer-section">
-                <h5>MENU</h5>
+                <h5>QUICK LINKS</h5>
+                <div class="footer-link">
+                <% if user_signed_in? %>
+                    <%= link_to 'Dashboard', user_root_path %>
+                    <%= link_to 'Create Activity', new_activity_path %>
+                    <%= link_to 'My Profile', edit_user_registration_path %>
+                    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+                <% else %>
+                    <%= link_to 'Sign Up', new_user_registration_path %>
+                    <%= link_to 'Sign In', new_user_session_path %>
+                <% end %>
+                </div>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4">
                 <div class="footer-section">
-                <h5>SOCIAL</h5>
+                <h5>FOLLOW US</h5>
+                    <div class="social-links">
+                        <a href="https://www.twitter.com" target="_blank"><%= fa_icon "twitter" %></a>
+                        <a href="https://www.facebook.com" target="_blank"><%= fa_icon "facebook" %></a>
+                        <a href="https://www.instagram.com" target="_blank"><%= fa_icon "instagram" %></a>
+                        <a href="https://www.youtube.com" target="_blank"><%= fa_icon "youtube" %></a>
+                    </div>
                 </div>
             </div>
         </div>
