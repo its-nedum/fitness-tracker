@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :firstname, :lastname, presence: true
+
+  has_one_attached :image
 end
