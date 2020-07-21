@@ -45,13 +45,8 @@
                 <%= f.select(:gender, ['Male', 'Female'], {include_blank: "Select gender"}, {:class => 'form-control'}) %>
               </div>
               <div class="field col-sm-12 col-md-6">
-                <% if current_user.dob %>
-                  <%= f.label :date_of_birth %><br />
-                  <%= f.text_field :dob, autocomplete: "dob", :class => 'form-control', value: current_user.dob %>
-                <% else %>
                   <%= f.label :date_of_birth %><br />
                   <%= f.date_field :dob, autocomplete: "dob", :class => 'form-control' %>
-                <% end %>
               </div>
             </div>
             <div class="row">
