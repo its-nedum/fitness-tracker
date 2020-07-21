@@ -41,7 +41,7 @@
         <% @activitys.each do |activity| %>
             <div class="card mb-3">
                 <div class="card-header">
-                   <h4> <%= link_to activity.title, activity_path(activity) %> </h4>
+                   <h4 class="activity-title"> <%= link_to activity.title, activity_path(activity) %> </h4>
                 </div>
                 <div class="card-body">
                 <p class="card-text"><%= activity.description %></p>
