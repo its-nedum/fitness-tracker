@@ -3,7 +3,7 @@
         <div class="col-md-3">
             <div class="card">
                 <div class="text-center">
-                <% if current_user.image %>
+                <% if current_user.image.attached? %>
                     <%= image_tag(current_user.image, :alt => "pic", :class => 'img-avatar') %>
                 <% else %>
                     <%= image_tag('favicon.jpg', :alt => "pic", :class => 'img-avatar') %>
