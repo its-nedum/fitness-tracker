@@ -12,7 +12,7 @@ nav {
 .nav-item a:hover{
     color: red !important;
     border-bottom: 1px solid #fff;
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
 }
 
 .img-avatar{
