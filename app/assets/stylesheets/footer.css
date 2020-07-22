@@ -1,5 +1,3 @@
-
-
 /****************************************************************
 *   Home Page Footer - without image
 ****************************************************************/
@@ -66,12 +64,18 @@
 
 .footer-link a:hover{
     text-decoration: none;
+    color: #fff;
 }
 
 .social-links a{
     color: #fff;
     font-size: 2rem;
     margin-right: 15px;
+}
+
+.social-links a:hover{
+    text-decoration: none;
+    color: #fff;
 }
 
 .footer-section h5 {
