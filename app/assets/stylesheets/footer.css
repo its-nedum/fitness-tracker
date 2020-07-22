@@ -22,7 +22,7 @@
 ****************************************************************/
 .footer-banner{
     width: 100%;
-    height: 400px;
+    min-height: 400px;
     color: #fff;
     background-image: url('footer.png');
     background-size: 100% 100%;
@@ -36,6 +36,27 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+@media (max-width: 767px){
+    .footer-banner{
+        width: 100%;
+        min-height: 300px;
+        color: #fff;
+        background-image: none;
+        background-color: rgba(0,15,117,.8);
+        text-align: center;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+    
+    
+    .footer-section{
+        margin-top: 50px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    } 
+}
+/****************************************************************
+*   General Footer Styles
+****************************************************************/
 .footer-link a{
     color: #fff;
     display: block;
