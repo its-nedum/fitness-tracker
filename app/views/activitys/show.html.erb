@@ -51,7 +51,7 @@
                     <div class="col-sm-6" style="text-align:center">
                         <%= link_to "Edit Activity", edit_activity_path(@activity), :class => 'btn btn-warning' %>
                     </div>
-                    <div class="col-sm-6" style="text-align:center">
+                    <div class="col-sm-6 del-btn" style="text-align:center">
                         <%= link_to "Delete Activity", activity_path(@activity), method: :delete, data:{confirm: 'Are you sure?'}, :class => 'btn btn-danger' %>
                     </div>
                 </div>
