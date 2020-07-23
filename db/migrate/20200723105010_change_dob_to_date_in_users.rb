@@ -1,9 +1,10 @@
 class ChangeDobToDateInUsers < ActiveRecord::Migration[6.0]
-  def up
-    change_column :users, :dob, :date
-  end
-
-  def down
-    change_column :users, :dob, :text
+  def change
+    reversible do |dir|
+      change_table :users do |t|
+        dir.up   { t.change :dob, :date }
+        dir.down { t.change :dob, :text }
+      end
+    end
   end
 end
