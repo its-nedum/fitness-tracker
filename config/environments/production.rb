@@ -69,7 +69,7 @@ Rails.application.configure do
     user_name: ENV["GMAIL_USERNAME"],
     password:ENV["GMAIL_PASSWORD"]
   }
-  config.action_mailer.default_url_options = { :host => 'move-nd-groove.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://move-nd-groove.herokuapp.com' }
 
   config.action_mailer.perform_caching = false
 
