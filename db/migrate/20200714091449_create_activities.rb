@@ -7,8 +7,8 @@ class CreateActivities < ActiveRecord::Migration[6.0]
       t.string :distance
       t.string :duration
       t.string :elevation
-      t.text :date
-      t.text :time
+      t.date :date
+      t.time :time
       t.string :exertion
       t.string :user
 
