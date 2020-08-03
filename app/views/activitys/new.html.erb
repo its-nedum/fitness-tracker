@@ -30,11 +30,11 @@
             <div class="row">
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :distance_in_Kilometers %><br>
-                    <%= form.number_field :distance,  :class => 'form-control' %>
+                    <%= form.number_field :distance, in: 1..10000,  :class => 'form-control' %>
                 </div>
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :elevation_in_meters %><br>
-                    <%= form.number_field(:elevation, {:class => 'form-control'}) %>
+                    <%= form.number_field :elevation, in: 1..10000, :class => 'form-control' %>
                 </div>
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :perceived_exertion %><br>
@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :duration_in_minutes %><br>
-                    <%= form.number_field(:duration, {:class => 'form-control'}) %>
+                    <%= form.number_field :duration, in: 1..10000, :class => 'form-control' %>
                 </div>
                 
                 <div class="col-sm-12 col-md-4">
