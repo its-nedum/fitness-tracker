@@ -42,7 +42,7 @@
                         <h6 class="card-subtitle mb-2 text-muted">Date</h6>
                     </div>
                     <div class="col-sm-4">
-                        <h5 class="card-title"><%= @activity.time %></h5>
+                        <h5 class="card-title"><%= @activity.time.strftime("%H:%M") %></h5>
                         <h6 class="card-subtitle mb-2 text-muted">Start Time</h6>
                     </div>    
                 </div>
@@ -56,7 +56,6 @@
                     </div>
                 </div>
             </div>
-
             </div>
         </div>
         <div class="col-md-2"></div>
