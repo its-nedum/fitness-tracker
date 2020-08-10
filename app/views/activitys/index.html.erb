@@ -36,35 +36,37 @@
         </div>
         <div class="col-sm-12 col-md-9">
         <h3><strong>Activity Feed</strong></h3>
-        <% if @activitys.count == 0 %>
-            <p class="text-danger">No activity found!</p>
-        <% end %>
-        <% @activitys.each do |activity| %>
-            <div class="card mb-3">
-                <div class="card-header">
-                   <h4 class="activity-title"> <%= link_to activity.title, activity_path(activity) %> </h4>
-                </div>
-                <div class="card-body">
-                <p class="card-text"><%= activity.description %></p>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h5 class="card-title"><%= activity.distance %> Km</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Distance</h6>
-                    </div>
-                    <div class="col-sm-4">
-                        <h5 class="card-title"><%= activity.duration %> Min</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Duration</h6>
-                    </div>
-                    <div class="col-sm-4">
-                        <h5 class="card-title"><%= activity.exertion %></h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Exertion</h6>
-                    </div>    
-                </div>
-                    <hr>   
-                    <%= link_to "Read more", activity_path(activity), :class => 'btn btn-info float-md-right' %>
-                </div>
-            </div>    
-        <% end %>
+        
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Duration(mins)</th>
+                    <th scope="col">Date</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            <% if @activitys.count == 0 %>
+            <tr>
+                <td><p class="text-danger">No activity found!</p></td>
+            </tr>
+            <% end %>
+            
+            <% @activitys.each do |activity| %>
+                <tr>
+                    <td class="activity-title"><%= link_to activity.title, activity_path(activity) %></td>
+                    <td><%= truncate(activity.description) %></td>
+                    <td><%= activity.duration %></td>
+                    <td><%= activity.date %></td>
+                    <td><%= link_to "Read more", activity_path(activity), :class => 'btn btn-info float-md-right' %></td>
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+        
         </div>
         
     </div>
