@@ -17,13 +17,13 @@
                 </div>
                 <div class="col-sm-12 col-md-6">
                     <%= form.label :title %><br>
-                    <%= form.text_field :title, placeholder: "Morning Run", :class => 'form-control' %>
+                    <%= form.text_field :title, placeholder: "Morning Run", :maxlength => 50, :class => 'form-control' %>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12 mt-2">
                     <%= form.label :description %><br>
-                    <%= form.text_area :description, placeholder: "How did it go? Were you tired? How was the weather?", :class => 'form-control' %>
+                    <%= form.text_area :description, placeholder: "How did it go? Were you tired? How was the weather?", :maxlength => 500, :class => 'form-control' %>
                 </div>
             </div>
             <hr>
