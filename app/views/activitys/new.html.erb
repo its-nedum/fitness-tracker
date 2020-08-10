@@ -50,7 +50,7 @@
                 
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :date %><br>
-                    <%= form.date_field(:date, {:class => 'form-control'}) %>
+                    <%= form.date_field :date, max: Date.today, :class => 'form-control' %>
                 </div>
                 <div class="col-sm-12 col-md-4">
                     <%= form.label :start_time %><br>
