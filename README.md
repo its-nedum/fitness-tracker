@@ -1,3 +1,48 @@
+# Fitness Tracker
+Fitness tracker is a web app that allows users to sign up and log their fitness activities of different kinds.
+# Demo Link
+Access the app [Fitness Tracker](https://move-nd-groove.herokuapp.com)
+## Features
+
+### User
+- Create an account
+- Login
+- Update account
+### Activity
+- Create activity
+- Read activity
+- Update activity
+- Delete activity
+
+## Technologies Used
+Ruby on Rails, Devise
+
+## Installation
+
+Clone repo to your local machine:
+
+```git
+git clone https://github.com/its-nedum/fitness-tracker.git
+```
+
+### Install dependencies and run locally
+
+install GemFile
+```
+    bundle install
+```
+
+Create Users and Activity table
+```
+    rails db:migrate
+```
+
+Now start the rails server:
+
+```
+    rails s
+```
+
 # Project Brief
 
 Physical activity is important for health, and since you're a developer, why not build technology that helps people make healthier choices? 🍎
